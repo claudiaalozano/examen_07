@@ -10,30 +10,33 @@ class Alumno:
         return "El alumno {}".format(self.nombre) + " ha obtenido la siguiente calificación {}".format(self.nota) 
 
 class calificacion:
-    def __init__(self):
+    def __init__(self, nombre, nota):
+        self.nombre = nombre
+        self.nota = nota
         
-        self.lista1 = ["Maria", 3]
-        self.lista2 = ["Juan", 9]
+        lista1 = ["Maria", 3]
+        lista2 = ["Juan", 9]
         
+        def aprobado(lista1, lista2):
 
-        if self.lista1[1]>=5 and self.lista2[1] >=5:
-            return "Han aprobado {}".format(self.lista1[0]) + " y {}".format(self.lista2[0])
+            if lista1[1]>=5 and lista2[1] >=5:
+                return "Han aprobado {}".format(lista1[0]) + " y {}".format(lista2[0])
 
-        if self.lista1[1] < 5 and self.lista2[1]>= 5:
-            return "Ha aprobado {}".format(self.lista2[0]) + " y ha suspendido {}".format(self.lista1[0])
+            if lista1[1] < 5 and lista2[1]>= 5:
+                return "Ha aprobado {}".format(lista2[0]) + " y ha suspendido {}".format(lista1[0])
 
-        if self.lista1[1]>= 5 and self.lista2[1]< 5:
-            return "Ha aprobado {}".format(self.lista1[0]) + " y ha suspendido {}".format(self.lista2[0])
+            if lista1[1]>= 5 and lista2[1]< 5:
+                return "Ha aprobado {}".format(lista1[0]) + " y ha suspendido {}".format(lista2[0])
 
-        else:
-            return "Han suspendido {}".format(self.lista1[0]) + " y  {}".format(self.lista2[0]) 
+            else:
+                return "Han suspendido {}".format(lista1[0]) + " y  {}".format(lista2[0]) 
     
 
 
 al = Alumno("Maria", 3)
 al1 = Alumno("Juan", 9)
-al2 = calificacion()
-al3 = calificacion()
+al2 = calificacion("Maria", 3)
+al3 = calificacion("Juan", 9)
 print(al)
 print(al1)
 print(al2)
