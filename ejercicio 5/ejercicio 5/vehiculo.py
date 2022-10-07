@@ -7,7 +7,9 @@ class Vehiculo():
         self.color = color
         self.ruedas = ruedas
         
-
+    def catalogar():
+        lista =[]
+        
  
 
     def __str__(self):
@@ -66,6 +68,8 @@ class Motocicleta(Vehiculo):
     def __str__(self):
         return Vehiculo.__str__(self) + ", {} km/h, {} cc".format(self.velocidad, self.cilindrada)
 
+
+    
 
 c = Coche("azul", 4, 150, 1200)
 
